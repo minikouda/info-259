@@ -1,0 +1,7 @@
+The `en_wiki_sample.txt` is a random sample of 1M lines (roughly, paragraph blocks) from a 20250401 dump of English Wikipedia, where the lines are at least 140 characters long.
+
+This is the command used to generate the file:
+
+```sh
+ls /mnt/data0/wikipedia/enwiki_lines/*.txt |  xargs rg --no-filename '^.{140,}' --max-columns=0 | pv | shuf | head -100000 en_wiki_sample.txt
+```
