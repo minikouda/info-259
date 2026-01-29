@@ -89,6 +89,8 @@ os.chdir('./self/HW/hw1_embeddings')
 corpus_path = "./en_wiki_sample.txt"
 dataloader = FileDataLoader(corpus_path)
 
+np.newaxis
+
 # print(dataloader.idx2vocab[:10])
 # alpha=.75
 # dataloader.negative_sample_weights(alpha=alpha)
